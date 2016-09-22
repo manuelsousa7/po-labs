@@ -16,7 +16,7 @@ typedef struct Pen
 
 Pen newPen(char * brand, char * colour,int capacity);
 void print(Pen caneta);
-Pen reduce_capacity(Pen caneta);
+void reduce_capacity(Pen caneta);
 int get_capacity(Pen caneta);
 char* get_colour(Pen caneta);
 char* get_brand(Pen caneta);

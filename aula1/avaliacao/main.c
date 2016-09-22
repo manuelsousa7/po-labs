@@ -4,11 +4,23 @@
 int main() {
   Pen p1 = newPen("Bic", "green",100);
   Pen p2 = newPen("Bic", "green",100);
-  Pen p3 = newPen("Bic", "green",2);
+  Pen p3 = newPen("Bic", "green",50);
  
   print(p1);
   print(p2);
  
+  write(p3, "SLB");
+  print(p3);
+  write(p3, "SLB");
+  print(p3);
+  write(p3, "SLB");
+  print(p3);
+  write(p3, "SLB");
+  print(p3);
+  write(p3, "SLB");
+  print(p3);
+  write(p3, "SLB");
+  print(p3);
   write(p3, "SLB");
   print(p3);
   write(p3, "SLB");

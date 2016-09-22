@@ -16,23 +16,26 @@ void print(Pen caneta){
 	printf("BRAND: %s && COLOUR: %s && CAPACITY:%d\n",get_brand(caneta),get_colour(caneta),get_capacity(caneta));
 }
 
-Pen reduce_capacity(Pen caneta){
+void reduce_capacity(Pen caneta){
 	caneta->capacity-=1;
-	return caneta;
 }
 
+//Viola Abstracao
 int get_capacity(Pen caneta){
 	return caneta->capacity;
 }
 
+//Viola Abstracao
 char* get_colour(Pen caneta){
 	return caneta->colour;
 }
 
+//Viola Abstracao
 char* get_brand(Pen caneta){
 	return caneta->brand;
 }
 
+//Viola Abstracao
 Pen recharge(Pen caneta,int new_recharge){
 	if (caneta==NULL)
 		return NULL;
@@ -54,7 +57,7 @@ void write(Pen caneta,char * word){
 		return;
 	if(get_capacity(caneta)>=1){
 		printf("Caneta de cor %s da marca %s escreve %s\n",get_colour(caneta),get_brand(caneta),word);
-		caneta=reduce_capacity(caneta);
+		reduce_capacity(caneta);
 	}
 }
 
@@ -64,6 +67,7 @@ int equals(Pen caneta1 , Pen caneta2){
 	return (strcmp(get_colour(caneta1),get_colour(caneta2))==0 && strcmp(get_brand(caneta1),get_brand(caneta2))==0 && get_capacity(caneta1)==get_capacity(caneta2));
 }
 
+//Viola Abstracao
 void deletePen(Pen caneta){
 	if(caneta){
 		free(caneta->brand);
