@@ -2,12 +2,13 @@
 #define _PENWITHINK_
 
 #include <stdio.h>
-#include <stdlib.h>
 
 typedef struct caneta
 {
 	int tinta;
 
-}*caneta;
+}caneta;
 
 caneta cria_caneta(int inicial);
+
+#endif
