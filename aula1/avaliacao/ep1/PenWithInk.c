@@ -16,7 +16,6 @@ void print(Pen caneta){
 	printf("BRAND: %s && COLOUR: %s && CAPACITY:%d\n",get_brand(caneta),get_colour(caneta),get_capacity(caneta));
 }
 
-//Viola Abstracao
 void reduce_capacity(Pen caneta){
 	caneta->capacity-=1;
 }
