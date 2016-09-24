@@ -1,3 +1,4 @@
+//Manuel Sousa - 84740 - IST LEIC
 #include <stdio.h>
 #include "PenWithInk.h"
  

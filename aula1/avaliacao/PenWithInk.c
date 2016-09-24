@@ -1,5 +1,5 @@
+//Manuel Sousa - 84740 - IST LEIC
 #include "PenWithInk.h"
-
 
 Pen newPen(char * brand, char * colour, int capacity){
 	Pen caneta = (Pen)malloc(sizeof(struct Pen));
@@ -40,9 +40,9 @@ char* get_brand(Pen caneta){
 Pen recharge(Pen caneta,int new_recharge){
 	if (caneta==NULL)
 		return NULL;
-	if(caneta->capacity+new_recharge>=1000)
+	if(caneta->capacity+new_recharge>=MAXTINTA)
 		caneta->capacity=MAXTINTA;
-	else
+	else if(new_recharge >= 0)
 		caneta->capacity+=new_recharge;
 	return caneta;
 }

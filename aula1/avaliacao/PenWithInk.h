@@ -1,6 +1,6 @@
+//Manuel Sousa - 84740 - IST LEIC
 #ifndef _PENWITHINK_
 #define _PENWITHINK_
-
 
 #include <stdio.h>
 #include <string.h>
