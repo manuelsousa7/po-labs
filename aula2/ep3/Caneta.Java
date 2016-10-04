@@ -29,9 +29,7 @@ class Caneta {
 
   public static void main(String[] args) {
     Caneta n1 = new Caneta(2, "asd");
-    n1.getCapacity();
-    n1.addCapacity(100);
-    n1.getCapacity();
-    System.out.println(n1.getCapacity());
+    Caneta n2 = new Caneta(2, "asd");
+    System.out.println(n1.isEqual(n2));
   }
 }
