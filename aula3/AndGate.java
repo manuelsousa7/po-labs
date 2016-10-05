@@ -8,7 +8,7 @@ class AndGate {
   }
 
   public void AndGate(){
-    //_entrada1 = _entrada2 = false; NOT NECESSARY
+    _entrada1 = _entrada2 = false;
   }
 
   public Boolean getEntrada1(){
