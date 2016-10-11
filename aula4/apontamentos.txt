@@ -1,0 +1,28 @@
+Documentos
+
+
+
+file | comentarios
+	 |
+	 |	codigo
+  |
+  |->javadoc -> .html
+
+/* Classe
+*
+*@author
+@version
+
+
+
+
+
+
+___
+
+
+java -cp .. (incluir classes)
+
+
+
+
