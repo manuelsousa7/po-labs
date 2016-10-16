@@ -8,7 +8,7 @@ package jogogalo;
  * Possible use on in-line tags {@link JogoGalo}  <p>
  * First block tag ends description section.
  *
- * @author Manuel Goncalo
+ * @author Manuel e Goncalo
  * @version 1.0
  * @see <a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html">javadocs documentation</a>
  * @see <a href="https://en.wikipedia.org/wiki/Javadoc">javadocs at Wikipedia</a>
@@ -23,14 +23,9 @@ public class JogoGalo {
     private Peca[][] _tabuleiro;
 
     /**
-     * Default constructor: false for all inputs.
-     */
-
-    /**
-     * Overloaded constructor: Inputs receive same value.
+     * Default constructor: Inputs receive same value.
      * 
-     * @param v the input value.
-     * @see #NameClass() NameClass
+     * @param tamanho the input value.
      */
     public JogoGalo(int tamanho) {
         _tabuleiro = new Peca[tamanho][tamanho];
@@ -47,8 +42,9 @@ public class JogoGalo {
      * Short method summary description.
      * Longer description. 
      *
-     * @param a variable description
-     * @param b variable description
+     * @param peca variable description
+     * @param linha variable description
+     * @param coluna variable description
      * @return Description text
      */
     public boolean joga(Peca peca, int linha, int coluna) {
