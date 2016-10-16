@@ -1,9 +1,37 @@
 package jogogalo;
 
+/**
+ * Short class summary description.
+ * Longer description. <p>
+ * More description if needed.  <p>
+ * Possible use of HTML paragraph breaks. <p>
+ * Possible use on in-line tags {@link JogoGalo}  <p>
+ * First block tag ends description section.
+ *
+ * @author Manuel Goncalo
+ * @version 1.0
+ * @see <a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html">javadocs documentation</a>
+ * @see <a href="https://en.wikipedia.org/wiki/Javadoc">javadocs at Wikipedia</a>
+ * @see <a href="http://docs.oracle.com/javase/tutorial/java/package/index.html">package documentation</a>
+ */
+
 public class JogoGalo {
 
+    /**
+    * Description of the instance variable here
+    */
     private Peca[][] _tabuleiro;
 
+    /**
+     * Default constructor: false for all inputs.
+     */
+
+    /**
+     * Overloaded constructor: Inputs receive same value.
+     * 
+     * @param v the input value.
+     * @see #NameClass() NameClass
+     */
     public JogoGalo(int tamanho) {
         _tabuleiro = new Peca[tamanho][tamanho];
         Peca peca = new PecaLivre();
@@ -15,6 +43,14 @@ public class JogoGalo {
         }
     }
 
+    /**
+     * Short method summary description.
+     * Longer description. 
+     *
+     * @param a variable description
+     * @param b variable description
+     * @return Description text
+     */
     public boolean joga(Peca peca, int linha, int coluna) {
         if(temJogadasDisponiveis() && linha - 1 < _tabuleiro.length && coluna - 1 < _tabuleiro.length){
             _tabuleiro[linha - 1][coluna - 1] = peca;
