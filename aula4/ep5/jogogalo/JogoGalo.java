@@ -1,7 +1,7 @@
 package jogogalo;
 
 /**
- * Ficheiro que contem o jogo do galo (@link JogoGalo).
+ * Ficheiro que contem o jogo do galo ({@link JogoGalo}).
  * Contem todas as funcoes relativas ao jogo e e onde se inicia o tabuleiro e suas jogadas.<p>
  *
  * @author Manuel e Goncalo
