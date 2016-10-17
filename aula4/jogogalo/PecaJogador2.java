@@ -1,12 +1,7 @@
 package jogogalo;
 
 /**
- * Short class summary description.
- * Longer description. <p>
- * More description if needed.  <p>
- * Possible use of HTML paragraph breaks. <p>
- * Possible use on in-line tags {@link PecaJogador2}  <p>
- * First block tag ends description section.
+ * Classe que representa uma peca do jogador2 do jogo do galo.
  *
  * @author Manuel e Goncalo
  * @version 1.0
@@ -16,7 +11,10 @@ package jogogalo;
  */
 public class PecaJogador2 extends Peca
 {
-	PecaJogador2() {
+	/**
+     * Construtor da classe.
+     */
+	publicPecaJogador2() {
 		super("o", "Jogador2");
 	}
 }

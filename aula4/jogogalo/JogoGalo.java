@@ -1,7 +1,7 @@
 package jogogalo;
 
 /**
- * Short class summary description.
+ * Classe que representa o jogo do galo (jogavel)
  * Longer description. <p>
  * More description if needed.  <p>
  * Possible use of HTML paragraph breaks. <p>
