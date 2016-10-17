@@ -1,12 +1,7 @@
 package jogogalo;
 
 /**
- * Short class summary description.
- * Longer description. <p>
- * More description if needed.  <p>
- * Possible use of HTML paragraph breaks. <p>
- * Possible use on in-line tags {@link PecaLivre}  <p>
- * First block tag ends description section.
+ * Classe que representa uma peca livre do jogo do galo.
  *
  * @author Manuel e Goncalo
  * @version 1.0
@@ -17,27 +12,28 @@ package jogogalo;
 public class PecaLivre extends Peca
 {
 	/**
-     * Default constructor: Inputs receive same value.
-     * 
-     * @param tamanho the input value.
+     * Construtor da classe.
      */
-	PecaLivre() {
+	public PecaLivre() {
 		super(" ", "None");
 	}
 
 	/**
-     * Default constructor: Inputs receive same value.
+     * Devolve true se o jogador que jogou ambas as pecas for o mesmo.
      * 
-     * @param tamanho the input value.
+     * @param peca2 A peca com a qual esta vai ser comparada
+     * @return boolean Retorna true se o valor da comparacao entre os
+     * nomes dos jogadores das duas pecas for verdadeiro, e false caso contrario
      */
 	public boolean samePlayerThan(Peca peca2) {
 		return false;
 	}
 
 	/**
-     * Default constructor: Inputs receive same value.
+     * Devolve true se esta peca e livre.
      * 
-     * @param tamanho the input value.
+     * @param peca2 A peca com a qual esta vai ser comparada
+     * @return boolean Retorna true se esta peca for da classe PecaLivre
      */
 	public boolean isFree() {
 		return true;

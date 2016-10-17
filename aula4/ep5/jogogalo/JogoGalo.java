@@ -58,9 +58,10 @@ public class JogoGalo {
      * @return Retorna true se ha jogadas disponiveis. false se não ha
      */
     public boolean temJogadasDisponiveis() {
+        Peca peca = new PecaLivre();
         for (int i = 0; i < _tabuleiro.length; i++) {
             for (int ii = 0; ii < _tabuleiro.length; ii++) {
-                if(_tabuleiro[i][ii].getPiece() == " ")
+                if(_tabuleiro[i][ii].getPiece() == peca.getPiece())
                     return true;
             }
         }
@@ -192,7 +193,7 @@ public class JogoGalo {
      * @param args argumentos String[]
      */
     public static void main(String[] args) {
-        JogoGalo jogo = new JogoGalo(5);
+        JogoGalo jogo = new JogoGalo(3);
         Peca p1 = new PecaJogador1();
         Peca p2 = new PecaJogador2();
 
