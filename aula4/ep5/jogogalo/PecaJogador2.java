@@ -5,14 +5,13 @@ package jogogalo;
  *
  * @author Manuel e Goncalo
  * @version 1.0
- * @see <a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html">javadocs documentation</a>
- * @see <a href="https://en.wikipedia.org/wiki/Javadoc">javadocs at Wikipedia</a>
- * @see <a href="http://docs.oracle.com/javase/tutorial/java/package/index.html">package documentation</a>
  */
 public class PecaJogador2 extends Peca
 {
 	/**
      * Construtor da classe.
+     * Atribui "o" ao simbolo da peca e
+     * "Jogador2" ao nome do jogador.
      */
 	public PecaJogador2() {
 		super("o", "Jogador2");
