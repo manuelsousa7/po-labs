@@ -21,29 +21,33 @@ public class Loja {
     }
 
     public void registaVenda(double valor){
-    	_numeroVendas++;
+    	_numeroVendas ++;
     	_volumeVendas += valor;
     }
 
     public void registaReclamacao(){
-    	_numeroReclamacoes++;
+    	_numeroReclamacoes ++;
     }
 
     public static void main(String[] args) {
         Loja shop = new Loja();
         Cliente[] clienteNormais = new Cliente[22];
-        int n=28%22;
-        for(int i=0;i<22;i++){
-        	n=(28+i)%22;
-        	if(i<=6){
-        		clienteNormais[i] = new Cliente(shop,"XPTO"+ ("" + n));
+        int nClientes = 22;
+        int nClientesNormais = 6;
+        int nGrupo = 28;
+        int n = nGrupo % nClientes;
+        for(int i = 0; i < nClientes; i++){
+        	n = (nGrupo + i) % nClientes;
+        	if(i <= nClientesNormais){
+        		clienteNormais[i] = new Cliente(shop, "XPTO"+ ("" + n));
         	} else {
-        		clienteNormais[i] = new ClienteVip(shop,"XPTO"+("" + n));
+        		clienteNormais[i] = new ClienteVip(shop, "XPTO"+("" + n));
         	}
         }
-        for(int i = 0;i < 22;i++){
+        for(int i = 0;i < nClientes;i++){
         	System.out.println(clienteNormais[i].obtemNome());
         	clienteNormais[i].consultaCatalogo();
+        	clienteNormais[i].reclama();
         	clienteNormais[i].compraProduto(15.0);
         }
 

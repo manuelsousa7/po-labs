@@ -3,7 +3,8 @@ public class ClienteVip extends Cliente
 	private int _pontos;
 
 	public ClienteVip (Loja loja, String name) {
-		super(loja,name);
+		super(loja, name);
+		_pontos = 0;
 	}
 
 	public void consultaCatalogo() {
