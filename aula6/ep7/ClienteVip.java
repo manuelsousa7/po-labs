@@ -2,6 +2,10 @@ public class ClienteVip extends Cliente
 {
 	private int _pontos;
 
+	public ClienteVip (Loja loja, String name) {
+		super(loja,name);
+	}
+
 	public void consultaCatalogo() {
 		super.consultaCatalogo();
 		System.out.println("Lista de promocoes");
@@ -11,6 +15,7 @@ public class ClienteVip extends Cliente
 		if (custo >= 10) {
 			_pontos += 5;
 		}
-		_loja.registaVenda(custo - custo * 0.1);
+		Loja store = obtemLoja();
+		store.registaVenda(custo - custo * 0.1);
 	}
 }

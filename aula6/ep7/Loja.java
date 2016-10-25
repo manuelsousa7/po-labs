@@ -1,23 +1,18 @@
-package loja;
-
 public class Loja {
 	private int _numeroVendas;
-	private float _volumeVendas;
+	private double _volumeVendas;
 	private int _numeroReclamacoes;
 
-	public void add(JogoGalo jogo) {
-        _jogos.add(jogo);
-    }
-
     public Loja() {
-        _numeroVendas = _volumeVendas = _numeroReclamacoes = 0;
+        _numeroVendas = _numeroReclamacoes = 0;
+        _volumeVendas = 0;
     }
 
     public int obtemNumeroVendas(){
     	return _numeroVendas;
     }
 
-    public int obtemVolumeVendas(){
+    public double obtemVolumeVendas(){
     	return _volumeVendas;
     }
 
@@ -25,7 +20,7 @@ public class Loja {
     	return _numeroReclamacoes;
     }
 
-    public void registaVenda(float valor){
+    public void registaVenda(double valor){
     	_numeroVendas++;
     	_volumeVendas += valor;
     }
@@ -36,10 +31,22 @@ public class Loja {
 
     public static void main(String[] args) {
         Loja shop = new Loja();
-        Cliente[] a = new Cliente[20];
-        for(int i=0;i<20;i++){
-
+        Cliente[] clienteNormais = new Cliente[22];
+        int n=28%22;
+        for(int i=0;i<22;i++){
+        	n=(28+i)%22;
+        	if(i<=6){
+        		clienteNormais[i] = new Cliente(shop,"XPTO"+ ("" + n));
+        	} else {
+        		clienteNormais[i] = new ClienteVip(shop,"XPTO"+("" + n));
+        	}
         }
+        for(int i = 0;i < 22;i++){
+        	System.out.println(clienteNormais[i].obtemNome());
+        	clienteNormais[i].consultaCatalogo();
+        	clienteNormais[i].compraProduto(15.0);
+        }
+
     }
 
 }

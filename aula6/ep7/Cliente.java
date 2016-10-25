@@ -24,4 +24,8 @@ public class Cliente
 	public String obtemNome() {
 		return _name;
 	}
+
+	public Loja obtemLoja() {
+		return _loja;
+	}
 }
