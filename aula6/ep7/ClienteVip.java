@@ -13,7 +13,7 @@ public class ClienteVip extends Cliente
 	}
 
 	public void compraProduto(double custo) {
-		if (custo >= 10) {
+		if (custo > 10) {
 			_pontos += 5;
 		}
 		Loja store = obtemLoja();
