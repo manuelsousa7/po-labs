@@ -1,15 +1,19 @@
 package jogogalo.core;
 
 /**
- * Usada para representar uma peca do jogador 1
- * @author Gonçalo Marques
+ * Classe que representa uma peca do jogador1 do jogo do galo.
+ *
+ * @author Manuel e Goncalo
+ * @version 1.0
  */
 public class PecaJogador1 extends Peca
 {
 	/**
-	* Construtor da peca do jogador 1
-	*/
-	PecaJogador1() {
+     * Construtor da classe.
+     * Atribui "x" ao simbolo da peca e
+     * "Jogador1" ao nome do jogador.
+     */
+	public PecaJogador1() {
 		super("x", "Jogador1");
 	}
 }
