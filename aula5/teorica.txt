@@ -1,0 +1,7 @@
+Map<k,v> - HashMap ou Treemap (tree based)
+List - LinkedList ou ArrayList
+Set - HashSet ou Treeset
+
+
+put(key,value)
+get(key)
