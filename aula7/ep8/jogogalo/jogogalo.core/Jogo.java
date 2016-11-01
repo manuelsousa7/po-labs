@@ -17,6 +17,7 @@ public class Jogo {
     * Matriz bidimensional que representara o tabuleiro de jogo 
     */
     private Peca[][] _tabuleiro;
+    private ResultadoJogo _estado;
 
     /**
      * Contrutor Default: Inicia matriz bidimensional que representara o tabuleiro
@@ -43,13 +44,36 @@ public class Jogo {
      * @return Retorna true se jogou a peca. Retorna false se não jogou
      */
     public boolean joga(Peca peca, int linha, int coluna) {
+        /*
         if(temJogadasDisponiveis() && linha - 1 < _tabuleiro.length && coluna - 1 < _tabuleiro.length){
             _tabuleiro[linha - 1][coluna - 1] = peca;
             return true;
         } else {
             return false;
         }
+        */
 
+        if (_estado != ResultadoJogo.NAO_FINALIZADO)
+            return false;
+
+        if (linha >= 1 && linha <= _tabuleiro.length && coluna >= 1 && coluna <= _tabuleiro[0].length &&
+          _tabuleiro[linha - 1][coluna - 1].estaLivre()) {
+            _tabuleiro[linha - 1][coluna - 1] = peca;
+
+            if (ganhou(linha, coluna))
+                _estado = (peca.devolveJogador().equals("Jogador 1")) ? ResultadoJogo.JOGADOR_1 : ResultadoJogo.JOGADOR_2;
+            else if (!temJogadasDisponiveis())
+                _estado = ResultadoJogo.EMPATE;
+
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public ResultadoJogo obtemResultado() {
+        return _estado;
     }
 
     /**

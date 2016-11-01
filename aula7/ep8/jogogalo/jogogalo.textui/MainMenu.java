@@ -10,10 +10,11 @@ import pt.utl.ist.po.ui.Menu;
  * shown to the users.
  ***/
 public class MainMenu extends Menu {
-  /**
-   * Constructor
-   **/
-  public MainMenu(AplicacaoJogoGalo app) {
-    super("Aplicação Jogo do Galo", new Command<?>[] { new PlayGame(app),});
-  }
+	
+	/**
+	* Constructor
+	**/
+	public MainMenu(AplicacaoJogoGalo app) {
+		super("Aplicação Jogo do Galo", new Command<?>[] { new PlayGame(app),});
+	}
 }
