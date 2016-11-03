@@ -19,8 +19,8 @@ public class ViewData extends Command<Command for showing the number of finished
      * 
      * @param app the target entity.
      */
-    public ViewData(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super("Mostar Histórico", ent);
+    public ViewData(AplicacaoJogoGalo app) {
+        super("Mostar Histórico", app);
     }
 
     /**

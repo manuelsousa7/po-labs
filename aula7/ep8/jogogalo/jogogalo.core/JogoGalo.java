@@ -1,7 +1,7 @@
 package jogogalo.core;
 
 /**
- * Ficheiro que contem o jogo do galo ({@link Jogo}).
+ * Ficheiro que contem o jogo do galo ({@link JogoGalo}).
  * Contem todas as funcoes relativas ao jogo e e onde se inicia o tabuleiro e suas jogadas.<p>
  *
  * @author Manuel e Goncalo
@@ -11,7 +11,7 @@ package jogogalo.core;
  * @see <a href="http://docs.oracle.com/javase/tutorial/java/package/index.html">package documentation</a>
  */
 
-public class Jogo {
+public class JogoGalo {
 
     /**
     * Matriz bidimensional que representara o tabuleiro de jogo 
@@ -24,7 +24,7 @@ public class Jogo {
      * 
      * @param tamanho Tamanho do tabuleiro que dá as Linhas e Colunas
      */
-    public Jogo(int tamanho) {
+    public JogoGalo(int tamanho) {
         _tabuleiro = new Peca[tamanho][tamanho];
         Peca peca = new PecaLivre();
 

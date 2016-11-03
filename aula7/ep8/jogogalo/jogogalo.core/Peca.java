@@ -44,7 +44,7 @@ abstract class Peca
      * @return String Retorna uma cadeia de caracteres que representa
      * o nome do jogador que jogou desta peca.
      */
-	public String GetName() {
+	public String devolveJogador() {
 		return _name;
 	}
 

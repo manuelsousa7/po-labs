@@ -1,5 +1,7 @@
 class ComparadorJogoGalo implements Comparator<JogoGalo>() {
+
     public int compare(JogoGalo g1, JogoGalo g2) {
+        
         if (g1.obtemResultado() == g2.obtemResultado())
             return 0;
         
