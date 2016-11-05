@@ -20,6 +20,11 @@ public class ShowVictoriousPlayer extends Command<AplicacaoJogoGalo> {
         super("Obter Jogador Com Mais Vitorias", app);
     }
 
+    public static int[] obtemAutoria() {
+        int[] inteiros = {28, 84719, 84740};
+        return inteiros;
+    }
+
     /**
      * Execute the command.
      */
