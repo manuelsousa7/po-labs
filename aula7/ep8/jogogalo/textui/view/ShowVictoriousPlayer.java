@@ -20,12 +20,17 @@ public class ShowVictoriousPlayer extends Command<AplicacaoJogoGalo> {
         super("Obter Jogador Com Mais Vitorias", app);
     }
 
+    public static int[] obtemAutoria() {
+        int[] inteiros = {28, 84719, 84740};
+        return inteiros;
+    }
+
     /**
      * Execute the command.
      */
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        //System.out.println("Numero de jogos terminados : " + entity().obtemNumeroJogos());
+        System.out.println("O Jogador Com Mais Vitórias : " + entity().obterJogadorMaisVitorioso());
     }
 }

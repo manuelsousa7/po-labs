@@ -33,6 +33,11 @@ public class ShowGame extends Command<AplicacaoJogoGalo> {
         InputInteger inI = new InputInteger(f, "Indique o indice do jogo que pretende aceder : ");
         f.parse();
 
-        System.out.println("Estado do jogo indicado : " + entity().obtemJogo(inI.value()).obtemEstadoJogo());
+        if (entity().obtemJogo(inI.value()) != null) {
+            System.out.println("Estado do jogo indicado : " + entity().obtemJogo(inI.value()).obtemEstadoJogo());
+        }
+        else {
+            System.out.println("Indice invalido!");
+        }
     }
 }
