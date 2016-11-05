@@ -56,7 +56,7 @@ public class AplicacaoJogoGalo {
         } else if (j1 < j2) {
             return "Jogador 2";
         } else {
-            return "Empate";
+            return "Empate de Vitorias";
         }
     }
 

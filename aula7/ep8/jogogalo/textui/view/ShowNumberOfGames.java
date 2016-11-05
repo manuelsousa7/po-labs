@@ -13,7 +13,7 @@ public class ShowNumberOfGames extends Command<AplicacaoJogoGalo> {
 
     /**
      * Constructor.
-     * 
+     *
      * @param ent the target entity.
      */
     public ShowNumberOfGames(AplicacaoJogoGalo app) {

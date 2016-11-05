@@ -23,7 +23,7 @@ public class HumanPlayer extends Command<JogoGalo> {
 
     /**
      * Constructor.
-     * 
+     *
      * @param game the target entity.
      * @param firstPlayer plays as first player or second player
      */
