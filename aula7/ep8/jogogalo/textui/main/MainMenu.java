@@ -14,8 +14,6 @@ public class MainMenu extends Menu {
    * Constructor
    **/
   public MainMenu(AplicacaoJogoGalo app) {
-    super("Aplicação Jogo do Galo", new Command<?>[] {
-        new PlayGame(app),
-          });
+    super("Aplicação Jogo do Galo", new Command<?>[] { new PlayGame(app), new ViewData(app)});
   }
 }
