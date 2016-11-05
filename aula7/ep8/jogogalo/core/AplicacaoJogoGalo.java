@@ -39,6 +39,28 @@ public class AplicacaoJogoGalo {
         }
     }
 
+    public String obterJogadorMaisVitorioso() {
+        Iterator<JogoGalo> iter = _jogos.iterator();
+        int i = 0, j1 = 0, j2 = 0;
+
+        while (iter.hasNext()) {
+            JogoGalo jogo = iter.next();
+            if (jogo.obtemResultado() == ResultadoJogo.JOGADOR_1) {
+                j1++;
+            } else if (jogo.obtemResultado() == ResultadoJogo.JOGADOR_2) {
+                j2++;
+            }
+        }
+        if (j1 > j2) {
+            return "Jogador 1";
+        } else if (j1 < j2) {
+            return "Jogador 2";
+        } else {
+            return "Empate";
+        }
+    }
+
+
     public List<JogoGalo> obtemJogosOrdenados() {
         Comparator<JogoGalo> comparador = new Comparator<JogoGalo>() {
             public int compare(JogoGalo g1, JogoGalo g2) {
