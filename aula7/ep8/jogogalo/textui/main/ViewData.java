@@ -5,6 +5,7 @@ import pt.utl.ist.po.ui.Command;
 
 import jogogalo.textui.view.ShowGame;
 import jogogalo.textui.view.ShowNumberOfGames;
+import jogogalo.textui.view.ShowVictoriousPlayer;
 
 import jogogalo.core.AplicacaoJogoGalo;
 
@@ -33,7 +34,9 @@ public class ViewData extends Command<AplicacaoJogoGalo> {
         Command<?>[] commands = {
             new ShowNumberOfGames(entity()),
             new ShowGame(entity()),
+            new ShowVictoriousPlayer(entity()),
         };
+
         Menu historicoMenu = new Menu("Historico", commands);
         historicoMenu.open();
     }
