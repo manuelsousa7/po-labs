@@ -1,6 +1,7 @@
 package jogogalo.textui;
 
 import jogogalo.core.AplicacaoJogoGalo;
+
 import jogogalo.textui.main.MainMenu;
 
 import static pt.utl.ist.po.ui.UserInteraction.IO;

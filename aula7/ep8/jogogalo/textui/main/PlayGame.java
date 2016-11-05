@@ -37,7 +37,7 @@ public class PlayGame extends Command<AplicacaoJogoGalo> {
     @SuppressWarnings("nls")
     public final void execute() {
         Form f = new Form();
-        InputInteger inI = new InputInteger(f, "Indique dimensão do jogo: ");
+        InputInteger inI = new InputInteger(f, "Indique dimendsão do jogo: ");
         f.parse();
 
         JogoGalo jogo = new JogoGalo(inI.value());
