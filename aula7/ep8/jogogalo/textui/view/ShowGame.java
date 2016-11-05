@@ -20,7 +20,7 @@ public class ShowGame extends Command<AplicacaoJogoGalo> {
      * @param ent the target entity.
      */
     public ShowGame(AplicacaoJogoGalo app) {
-        super("Mostrar Jogo", ent);
+        super("Mostrar Estado De Jogo", app);
     }
 
     /**
@@ -29,6 +29,10 @@ public class ShowGame extends Command<AplicacaoJogoGalo> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        // add code here
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, "Indique o indice do jogo que pretende aceder : ");
+        f.parse();
+
+        System.out.println("Estado do jogo indicado : " + entity().obtemJogo(inI.value()).obtemEstadoJogo());
     }
 }

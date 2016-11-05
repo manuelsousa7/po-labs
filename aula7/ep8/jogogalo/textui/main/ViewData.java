@@ -20,7 +20,7 @@ public class ViewData extends Command<AplicacaoJogoGalo> {
      * @param app the target entity.
      */
     public ViewData(AplicacaoJogoGalo app) {
-        super("Mostar Histórico", ent);
+        super("Mostar Historico", app);
     }
 
     /**
@@ -29,6 +29,12 @@ public class ViewData extends Command<AplicacaoJogoGalo> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-	// add code here
+
+        Command<?>[] commands = {
+            new ShowNumberOfGames(entity()),
+            new ShowGame(entity()),
+        };
+        Menu historicoMenu = new Menu("Historico", commands);
+        historicoMenu.open();
     }
 }

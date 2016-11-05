@@ -9,15 +9,15 @@ import jogogalo.core.AplicacaoJogoGalo;
 /**
  * Command for showing the number of finished games.
  */
-public class ShowNumberOfGames extends Command<AplicacaoJogoGalo> {
+public class ShowVictoriousPlayer extends Command<AplicacaoJogoGalo> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public ShowNumberOfGames(AplicacaoJogoGalo app) {
-        super("Obter Número de Jogos", app);
+    public ShowVictoriousPlayer(AplicacaoJogoGalo app) {
+        super("Obter Jogador Com Mais Vitorias", app);
     }
 
     /**
@@ -26,6 +26,6 @@ public class ShowNumberOfGames extends Command<AplicacaoJogoGalo> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        System.out.println("Numero de jogos terminados : " + entity().obtemNumeroJogos());
+        //System.out.println("Numero de jogos terminados : " + entity().obtemNumeroJogos());
     }
 }
