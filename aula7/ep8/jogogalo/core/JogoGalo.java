@@ -23,7 +23,7 @@ public class JogoGalo {
             return false;
 
         if (linha >= 1 && linha <= _tabuleiro.length && coluna >= 1 && coluna <= _tabuleiro[0].length &&
-          _tabuleiro[linha - 1][coluna - 1].estaLivre()) {
+                _tabuleiro[linha - 1][coluna - 1].estaLivre()) {
             _tabuleiro[linha - 1][coluna - 1] = peca;
 
             if (ganhou(linha, coluna))
@@ -44,7 +44,7 @@ public class JogoGalo {
                     return true;
             }
         }
-        
+
         return false;
     }
 
@@ -89,7 +89,7 @@ public class JogoGalo {
             if (resultado)
                 return true;
         }
-        
+
         if (linha + coluna == _tabuleiro.length - 1) {             // verifica diagonal inversa
             resultado = true;
             int j;
@@ -103,7 +103,7 @@ public class JogoGalo {
             if (resultado)
                 return true;
         }
-        
+
         return false;
     }
 
@@ -122,7 +122,7 @@ public class JogoGalo {
         StringBuilder res = new StringBuilder();
         int i;
 
-        for(i = 0; i < linha.length - 1; i++) {
+        for (i = 0; i < linha.length - 1; i++) {
             res.append(linha[i].obtemSimbolo()).append("|");
         }
 
@@ -146,6 +146,10 @@ public class JogoGalo {
         return str.toString();
     }
 
+    public ResultadoJogo obtemResultado() {
+        return _estado;
+    }
+
     public static void main(String[] args) {
         JogoGalo jogo = new JogoGalo(3);
         Peca p1 = new PecaJogador1();
@@ -155,7 +159,7 @@ public class JogoGalo {
         jogo.joga(p1, 1, 1);
         jogo.joga(p2, 1, 2);
         System.out.println("Após duas jogadas\n" + jogo.obtemEstadoJogo());
-        
+
         System.out.println("P1 ganhou " + jogo.ganhou(1, 1));
         System.out.println("P2 ganhou " + jogo.ganhou(1, 2));
 
@@ -174,12 +178,9 @@ public class JogoGalo {
         jogo.joga(p1, 3, 3);
         System.out.println("Após 7  jogadas\n" + jogo.obtemEstadoJogo());
         System.out.println("P1 ganhou: " + jogo.ganhou(3, 3));
-        
+
     }
 
-    public ResultadoJogo obtemResultado() {
-        return _estado;
-    }
 }
 
-    
+
