@@ -26,6 +26,6 @@ public class ShowVictoriousPlayer extends Command<AplicacaoJogoGalo> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        System.out.println("O Jogador Com Mais Vitórias : " + entity().obtemJogadorMaisVitorioso());
+        System.out.println("O Jogador Com Mais Vitórias : " + entity().obterJogadorMaisVitorioso());
     }
 }
