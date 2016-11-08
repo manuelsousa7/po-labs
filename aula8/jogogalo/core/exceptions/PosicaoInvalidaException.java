@@ -5,7 +5,7 @@ public class PosicaoInvalidaException extends JogadaInvalidaException {
 	private String _mensagem;
 
 	public PosicaoInvalidaException(String mensagem) {
-		mensagem = mensagem;
+		_mensagem = mensagem;
 	}
 
 	public final String obtemMensagem(){

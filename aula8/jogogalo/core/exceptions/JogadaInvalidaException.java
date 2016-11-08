@@ -5,7 +5,7 @@ public class JogadaInvalidaException extends Exception {
 	private String _mensagem;
 
 	public JogadaInvalidaException(String mensagem) {
-		mensagem = mensagem;
+		_mensagem = mensagem;
 	}
 
 	public final String obtemMensagem(){

@@ -5,7 +5,7 @@ public class PosicaoOcupadaException extends JogadaInvalidaException {
 	private String _mensagem;
 
 	public PosicaoOcupadaException(String mensagem) {
-		mensagem = mensagem;
+		_mensagem = mensagem;
 	}
 
 	public final String obtemMensagem(){
