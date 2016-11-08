@@ -8,7 +8,7 @@ import pt.utl.ist.po.ui.InputInteger;
 
 import jogogalo.core.AplicacaoJogoGalo;
 import jogogalo.core.JogoGalo;
-
+import jogogalo.core.exceptions.JogoGaloInvalidoException;
 /**
  * Command for showing the final state of a finished game.
  */
@@ -34,8 +34,8 @@ public class ShowGame extends Command<AplicacaoJogoGalo> {
             InputInteger inI = new InputInteger(f, "Indique o indice do jogo que pretende aceder : ");
             f.parse();
             System.out.println("Estado do jogo indicado : " + entity().obtemJogo(inI.value()).obtemEstadoJogo());
-        } catch (JogadaInvalidaException e) {
-            println(e.obtemMensagem());
+        } catch (JogoGaloInvalidoException e) {
+            System.out.println(e.obtemMensagem());
         }
     }
 }
