@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Collections;
 
+import jogogalo.core.exceptions.JogadaInvalidaException;
+import jogogalo.core.exceptions.PosicaoInvalidaException;
+import jogogalo.core.exceptions.PosicaoOcupadaException;
 import jogogalo.core.exceptions.JogoGaloInvalidoException;
 
 public class AplicacaoJogoGalo {

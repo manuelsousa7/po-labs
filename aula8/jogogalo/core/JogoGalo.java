@@ -1,5 +1,9 @@
 package jogogalo.core;
 
+import jogogalo.core.exceptions.JogadaInvalidaException;
+import jogogalo.core.exceptions.PosicaoInvalidaException;
+import jogogalo.core.exceptions.PosicaoOcupadaException;
+
 public class JogoGalo {
 
     private Peca[][] _tabuleiro;
@@ -18,23 +22,28 @@ public class JogoGalo {
         _estado = ResultadoJogo.NAO_FINALIZADO;
     }
 
-    public boolean joga(Peca peca, int linha, int coluna) {
+    public boolean joga(Peca peca, int linha, int coluna) throws JogadaInvalidaException{
         if (_estado != ResultadoJogo.NAO_FINALIZADO)
             return false;
 
-        if (linha >= 1 && linha <= _tabuleiro.length && coluna >= 1 && coluna <= _tabuleiro[0].length &&
-                _tabuleiro[linha - 1][coluna - 1].estaLivre()) {
-            _tabuleiro[linha - 1][coluna - 1] = peca;
+        if (linha >= 1 && linha <= _tabuleiro.length && coluna >= 1 && coluna <= _tabuleiro[0].length) {
+            if (_tabuleiro[linha - 1][coluna - 1].estaLivre()) {
+                _tabuleiro[linha - 1][coluna - 1] = peca;
 
-            if (ganhou(linha, coluna))
-                _estado = (peca.devolveJogador().equals("Jogador 1")) ? ResultadoJogo.JOGADOR_1 : ResultadoJogo.JOGADOR_2;
-            else if (!temJogadasDisponiveis())
-                _estado = ResultadoJogo.EMPATE;
+                if (ganhou(linha, coluna))
+                    _estado = (peca.devolveJogador().equals("Jogador 1")) ? ResultadoJogo.JOGADOR_1 : ResultadoJogo.JOGADOR_2;
+                else if (!temJogadasDisponiveis())
+                    _estado = ResultadoJogo.EMPATE;
 
-            return true;
+                return true;
+            }
+            else {
+                throw new PosicaoOcupadaException("Posicao indicada esta ocupada!");
+            }
         }
-
-        return false;
+        else {
+            throw new PosicaoInvalidaException("Posicao indicada e invalida!");
+        }
     }
 
     public boolean temJogadasDisponiveis() {
@@ -150,6 +159,7 @@ public class JogoGalo {
         return _estado;
     }
 
+    /*
     public static void main(String[] args) {
         JogoGalo jogo = new JogoGalo(3);
         Peca p1 = new PecaJogador1();
@@ -180,7 +190,7 @@ public class JogoGalo {
         System.out.println("P1 ganhou: " + jogo.ganhou(3, 3));
 
     }
-
+    */
 }
 
 

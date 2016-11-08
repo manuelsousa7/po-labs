@@ -12,7 +12,9 @@ import jogogalo.core.Peca;
 import jogogalo.core.PecaJogador1;
 import jogogalo.core.PecaJogador2;
 import jogogalo.core.ResultadoJogo;
-
+import jogogalo.core.exceptions.JogadaInvalidaException;
+import jogogalo.core.exceptions.PosicaoInvalidaException;
+import jogogalo.core.exceptions.PosicaoOcupadaException;
 /**
  * Command for playing as a human player.
  */
@@ -45,17 +47,26 @@ public class HumanPlayer extends Command<JogoGalo> {
         f.parse();
         Display display = new Display();
 
-        if (entity().joga(_peca, row.value(), column.value())) { // play is valid
-            display.add(entity().obtemEstadoJogo());
-            invisible();     // turn off this player
+        try {
+            if (entity().joga(_peca, row.value(), column.value())) { // play is valid
+                display.add(entity().obtemEstadoJogo());
+                invisible();     // turn off this player
 
-            if (entity().obtemResultado() == ResultadoJogo.NAO_FINALIZADO) {
-                menu().entry(_idx).visible(); // it is the other player's turn
+                if (entity().obtemResultado() == ResultadoJogo.NAO_FINALIZADO) {
+                    menu().entry(_idx).visible(); // it is the other player's turn
+                } else
+                    display.addNewLine("Jogo Terminado");
             } else
-                display.addNewLine("Jogo Terminado");
-        } else
-            display.add("Jogada inválida");
+                display.add("Jogada inválida");
 
-        display.display();
+            display.display();
+        }
+        catch (PosicaoInvalidaException exc){
+            System.out.println(exc.obtemMensagem());
+        } catch (PosicaoOcupadaException exc){
+            System.out.println(exc.obtemMensagem());
+        } catch (JogadaInvalidaException exc){
+            System.out.println(exc.obtemMensagem());
+        }
     }
 }
