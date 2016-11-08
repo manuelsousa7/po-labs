@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Collections;
 
+import jogogalo.core.exceptions.JogoGaloInvalidoException;
+
 public class AplicacaoJogoGalo {
 
     private List<JogoGalo> _jogos;
@@ -18,9 +20,9 @@ public class AplicacaoJogoGalo {
         _jogos.add(jogo);
     }
 
-    public JogoGalo obtemJogo(int idx) {
+    public JogoGalo obtemJogo(int idx) throws JogoGaloInvalidoException {
         if (idx <= 0 || idx > _jogos.size())
-            return null;
+            throw new JogoGaloInvalidoException("Indice Invalido");
 
         return _jogos.get(idx - 1);
     }
