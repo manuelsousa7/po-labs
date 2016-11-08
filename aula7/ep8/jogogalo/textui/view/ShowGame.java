@@ -35,8 +35,7 @@ public class ShowGame extends Command<AplicacaoJogoGalo> {
 
         if (entity().obtemJogo(inI.value()) != null) {
             System.out.println("Estado do jogo indicado : " + entity().obtemJogo(inI.value()).obtemEstadoJogo());
-        }
-        else {
+        } else {
             System.out.println("Indice invalido!");
         }
     }

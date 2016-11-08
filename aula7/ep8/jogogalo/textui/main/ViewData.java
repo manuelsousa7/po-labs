@@ -17,7 +17,7 @@ public class ViewData extends Command<AplicacaoJogoGalo> {
 
     /**
      * Constructor.
-     * 
+     *
      * @param app the target entity.
      */
     public ViewData(AplicacaoJogoGalo app) {

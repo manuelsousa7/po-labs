@@ -15,7 +15,7 @@ import jogogalo.core.PecaJogador2;
 import jogogalo.core.ResultadoJogo;
 
 /**
- * Command for starting a new game. Creates a new game and shows a menu with two options: "Play as Player 1" and 
+ * Command for starting a new game. Creates a new game and shows a menu with two options: "Play as Player 1" and
  * "Play as Player 2". When the user quits this menu, if the game is finished then the game is added to the finished games
  * of this application.
  */
@@ -23,7 +23,7 @@ public class PlayGame extends Command<AplicacaoJogoGalo> {
 
     /**
      * Constructor.
-     * 
+     *
      * @param app the target entity.
      */
     public PlayGame(AplicacaoJogoGalo app) {
@@ -50,7 +50,7 @@ public class PlayGame extends Command<AplicacaoJogoGalo> {
         Menu jogoMenu = new Menu("Jogar", commands);
         jogoMenu.entry(1).invisible();
         jogoMenu.open();
- 
+
         if (jogo.obtemResultado() != ResultadoJogo.NAO_FINALIZADO) {
             entity().guarda(jogo);
         }
