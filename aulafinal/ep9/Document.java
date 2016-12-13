@@ -13,6 +13,6 @@ public class Document {
      * Writes this document into the specified format.
      **/
     public void write() {
-        _format.doOperation();
+        _format.writeDocument();
     }
 }
