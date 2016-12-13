@@ -2,9 +2,9 @@ package ep9;
 
 import ep9.DocumentFormat;
 
-public class FormaWord implements DocumentFormat {
+public class FormatWord implements DocumentFormat {
 
-	public int writeDocument() {
-
+	public void writeDocument() {
+		System.out.println("Formato Word");
 	}
 }
